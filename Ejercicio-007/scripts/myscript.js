@@ -17,8 +17,47 @@
 *
 ***************************************************************************************************************/
 
-function celsiusConverter(num){
-    return (5/9) * (num-32)
+// receives 2 parameters, type => "number" / "string", msg => Mesagge to be prompted (must be a String)
+function filteredInput(type, msg) {
+    let out
+    if(type == "string"){
+        do{
+            out = prompt(msg)
+        }while(!isNaN(out))
+    }
+    else if(type == "number"){
+        do{
+            out = prompt(msg)
+        }while(isNaN(out))
+    }
+    return out 
 }
 
-console.log(celsiusConverter(100))
+function celsiusConverter(num)
+{
+    return ((5/9) * (num-32)).toFixed(2)
+}
+
+function whatTemperature(num)
+{   
+    let comment = `Fahrenheit = ${userNumber}, Celsius = ${num}`
+
+    if(num < 0)
+    {
+        comment = comment + "\nTe congelas!"
+    }
+    else if(num < 10)
+    {
+        comment = comment + "\nQue frío!"
+    }
+    else if(num >= 25)
+    {
+        comment = comment + "\nQue calor!"
+    }
+    alert(comment)
+}
+
+let userNumber = filteredInput("number","introduce la temperatura en grados Fahrenheit: ")
+
+whatTemperature(celsiusConverter(userNumber))
+
