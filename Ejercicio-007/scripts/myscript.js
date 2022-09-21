@@ -38,7 +38,7 @@ function celsiusConverter(num)
     return ((5/9) * (num-32)).toFixed(2)
 }
 
-function whatTemperature(num)
+function theWeatherMan(num)
 {   
     let comment = `Fahrenheit = ${userNumber}, Celsius = ${num}`
 
@@ -59,5 +59,5 @@ function whatTemperature(num)
 
 let userNumber = filteredInput("number","introduce la temperatura en grados Fahrenheit: ")
 
-whatTemperature(celsiusConverter(userNumber))
+theWeatherMan(celsiusConverter(userNumber))
 

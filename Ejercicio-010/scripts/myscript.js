@@ -15,4 +15,30 @@
 *                   - La edad no puede ser superior a 120 (indicaremos el error)
 *
 ***************************************************************************************************************/
+// receives 2 parameters, type => "number" / "string", msg => Mesagge to be prompted (must be a String)
+function filteredInput(type, msg) 
+{
+  let out
+  if(type == "string"){
+      do{
+          out = prompt(msg)
+      }while(!isNaN(out))
+  }
+  else if(type == "number"){
+      do{
+          out = prompt(msg)
+      }while(isNaN(out))
+  }
+  return out 
+}
 
+function ageComment(age)
+{
+    if(age<=0) alert("Error, debes introducir un número positivo distinto de 0")
+    else if(age>120) alert("Error, el número máximo aceptado es 120")
+    else if(age<30) alert("!Ponte a trabajar!")
+    else if(age<=64) alert("!Que ganas tengo de jubilarme!")
+    else alert("!Descansa un poco!")
+}
+
+ageComment(filteredInput("number", "Introduce tu edad"))
