@@ -29,10 +29,24 @@ function filteredInput(type, msg)
 }
 
 function eleva_al_cuadrado(inicio, fin){
-    let arr = new Array
+    let arr = []
     for(let i = inicio; i < fin; i++){
-        arr[0++] = Math.pow(i,2)
+        arr.push(Math.pow(i,2))
     }
     return arr
 }
-alert(eleva_al_cuadrado(2,12))
+
+alert(eleva_al_cuadrado(filteredInput("number","Introduce el primer número"),12))
+
+//console.log(Array.from({length:fin-inicio+1},(el,indice)=> Math.pow(inicio+indice,2)).join(", "))
+
+const vector=Array.from({length:fin-inicio+1},(el,indice)=> inicio+indice)
+console.log(vector.map(el=>Math.pow(el,2)).join(", "))
+
+//const aleatorio=(min,max)=>parseInt(min+(max-min)*Math.random())
+//const vector=Array.from({length:5},el=>aleatorio(1,10))
+
+
+
+
+
