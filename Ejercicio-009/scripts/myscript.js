@@ -33,7 +33,7 @@ function filteredInput(type, msg)
 function candyDeliver(numCaramelos, numNiños)
 {
   let rest = numCaramelos%numNiños
-  let candyPerChild = (numCaramelos-(rest))/numNiños
+  let candyPerChild = parseInt(numCaramelos/numNiños)
 
   alert(`El número de caramelos por niño es: ${candyPerChild}\nEl número de caramelos que sobran es: ${rest}`)
   
