@@ -12,3 +12,11 @@
 *
 *
 ***************************************************************************************************************/
+function remove_unpermited_char(string){
+    let regExp = /[\.*/@!#$%&\\\(\)]/g
+    return string.replace(regExp,"")
+}
+
+console.log(remove_unpermited_char("Hola. ! @ # $ % & \ * ( ) que tal estas?"))
+
+

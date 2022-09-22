@@ -10,3 +10,14 @@
 *
 *
 ***************************************************************************************************************/
+
+let persona = {
+    "nombre" : "Manolo",
+    "edad"   :  36
+}
+
+function esMayorDeEdad(persona){
+    return persona.edad > 18 ? true : false
+}
+
+console.log(esMayorDeEdad(persona))
