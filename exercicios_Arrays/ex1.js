@@ -81,8 +81,10 @@ const sup_media = arr_media.filter((x) => x > media)
 const inf_media = arr_media.filter((x) => x < media) 
 
 function masCercano(arr,media) {
-    let min_sup_media = Math.min(arr.filter((x) => x > media))
-    let max_inf_media = Math.max(arr.filter((x) => x < media).max)
-    return (media - min_sup_media) < (media - max_inf_media) ? min_sup_media : max_inf_media
+    let min_media = arr.filter((x) => x > media)
+    let max_media = arr.filter((x) => x < media)
+    let min_sup_media = Math.min(...min_media)
+    let max_inf_media = Math.max(...max_media)
+    return ((media - min_sup_media) < (media - max_inf_media)) ? min_sup_media : max_inf_media
 }
 
