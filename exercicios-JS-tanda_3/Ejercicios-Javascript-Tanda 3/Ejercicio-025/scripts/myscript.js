@@ -16,3 +16,25 @@
 *             El problema 306 está en el volumen 3
 *
 ***************************************************************************************************************/
+// receives 2 parameters, type => "number" / "string", msg => Mesagge to be prompted (must be a String)
+function filteredInput(type, msg) 
+{
+  let out
+  if(type == "string"){
+      do{
+          out = prompt(msg)
+      }while(!isNaN(out))
+  }
+  else if(type == "number"){
+      do{
+          out = prompt(msg)
+      }while(isNaN(out) || out < 100)
+  }
+  return out 
+}
+
+const identifier = filteredInput("number","Introduce el identificador")
+const msg = `El problema ${identifier} está en el volumen ${identifier.toString().slice(0,-2)}`
+
+alert(msg);
+
