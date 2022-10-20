@@ -14,4 +14,7 @@
 ***************************************************************************************************************/
 let input = "Dabale arroz a la zorra el abad"
 
-const palindromo = (input) => input.split("").filter((x) => x!==" ").map((x) => x.toLowerCase()).toString() === input.split("").filter((x) => x!==" ").map((x) => x.toLowerCase()).reverse().toString()
+const palindromo = (input) => {
+    input.split("").filter((x) => x!==" ").map((x) => x.toLowerCase()) === input.split("").filter((x) => x!==" ").map((x) => x.toLowerCase()).reverse()
+}
+

@@ -17,9 +17,7 @@ const commonElements = (arr1,arr2) => arr1.filter( x => arr2.includes(x))
 const validaCuadricula = (cuadricula) => {
   const cuadriculaCorrecta = [1,2,3,4,5,6,7,8,9]
   let arr = [] 
-  cuadricula.forEach(element => {
-    arr.push(...element)
-  })
+  cuadricula.forEach(element => arr.push(...element))
   return commonElements(cuadriculaCorrecta,arr).length == 9 ? true : false
 }
 

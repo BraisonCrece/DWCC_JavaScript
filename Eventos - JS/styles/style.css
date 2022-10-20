@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#contExt {
+    width: 50vw;
+    height: 50vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 25vh;   
+    background-color: red;
+    border-radius: 20px;
+}
+
+#contInt {
+    width: 25vw;
+    height: 25vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: darkcyan;
+    border-radius: 20px;
+}
+
+a {
+    display: block;
+    margin: 10px;
+    background-color: blanchedalmond;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: darkorange;
+}
+
+a:active {
+    background-color: darkred;
+}

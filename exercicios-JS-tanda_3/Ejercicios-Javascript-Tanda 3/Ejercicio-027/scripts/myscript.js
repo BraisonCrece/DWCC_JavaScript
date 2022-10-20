@@ -29,27 +29,29 @@ function filteredInput(type, msg)
 }
 
 const buildTable = (nFilas,nCols) => {
+
+  let salida="<table border>"
   let itR = 1
   let itC = 1
-  
   while(itR <= nFilas){
-    document.write("<tr>")
+    salida+="<tr>"
     while(itC <= nCols){
-      document.write(`<td>${itC*itR}</td>`)
+      salida+=`<td>${itC*itR}</td>`
       itC++
     }
     itC = 1
-    document.write("</tr>")
+    salida+="</tr>"
     itR++
   }  
+  return salida+"</table>"
 }
 
 const nfilas = filteredInput("number", "Introduce el numero de filas")
 const ncols = filteredInput("number", "Introduce el numero de columnas")
 
+document.querySelector("#contenedor").innerHTML=buildTable(nfilas,ncols)
 
-document.write("<table>")
-buildTable(nfilas,ncols)
-document.write("</table>")
+
+
 
 

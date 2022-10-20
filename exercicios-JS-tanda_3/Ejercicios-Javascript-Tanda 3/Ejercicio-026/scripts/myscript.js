@@ -34,8 +34,14 @@ function filteredInput(type, msg)
 }
 
 const userNumber = filteredInput("number","Introduce un numero del 1 al 20")
-
-for(let i = 1; i<= userNumber; i++){
-  console.log(Array.from({length: i},() => i));
+let salida=""
+let salidaHTML=""
+for(let i = 1; i<= userNumber; i++) {
+  salida+=`${Array.from({length: i},() => i).join(" ")}`
+  salidaHTML+=`<p>${Array.from({length: i},() => i).join(" ")}</p>`
 }
+
+console.log(salida)
+document.querySelector("#contenedor").innerHTML=salidaHTML
+
 

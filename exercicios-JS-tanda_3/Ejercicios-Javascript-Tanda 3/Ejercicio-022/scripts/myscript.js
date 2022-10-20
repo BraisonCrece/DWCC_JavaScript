@@ -58,4 +58,4 @@ const buscarContacto = (nombre,prop) => {
     console.log(contacto.length > 0 ? contacto[0][prop] === undefined ? "El usuario no tiene esa propiedad" : contacto[0][prop] : "No existe ese usuario")
 }
 
-buscarContacto("Akira", "likes");
+buscarContacto("Akira", "likes")

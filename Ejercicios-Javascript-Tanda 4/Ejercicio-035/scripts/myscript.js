@@ -23,12 +23,33 @@
 *         Si nos vieramos en la necesidad de que una función devolviera varios datos ¿cómo podríamos hacerlo?
 *
 ***************************************************************************************************************/
-let peso = prompt("Introduce tu peso")
-let altura = prompt("Introduce tu altura")
+let peso = prompt("Introduce tu peso en Kg")
+let altura = prompt("Introduce tu altura en metros")
+let edad = prompt("Introduce tu edad")
 
-const imcCalc = (p, a) => {
-    let imc = Math.pow(a,2) / p
-    console.log(imc)
+const imcCalc = (p, a, e) => {
+    let imc =  p / Math.pow(a,2)
+    return imc >= 22 ?
+                e < 45 ?
+                    `Tu índice de masa corporal es ${imc.toFixed(2)}. Tienes un riesgo medio de enfermedad coronaria` :  
+                    `Tu índice de masa corporal es ${imc.toFixed(2)}. Tienes un riesgo medio de enfermedad coronaria` :
+                e < 45 ?
+                    `Tu índice de masa corporal es ${imc.toFixed(2)}. Tienes un riesgo bajo de enfermedad coronaria` :  
+                    `Tu índice de masa corporal es ${imc.toFixed(2)}. Tienes un riesgo medio de enfermedad coronaria`     
+   
 }
 
-imcCalc(peso,altura)
+console.log(imcCalc(peso,altura))
+
+/******************************************************************************************************************/
+// Si nos vieramos en la necesidad de que una función devolviera varios datos ¿cómo podríamos hacerlo?
+// Utilizamos a desestructuración de datos
+// Por exemplo:
+const getPersona = () => {
+    return ['Manolo', 'González']
+}
+
+const [nombre, apellido] = getPersona()
+
+console.log(nombre, apellido);
+// > Manolo González

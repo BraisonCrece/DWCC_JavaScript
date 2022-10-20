@@ -12,3 +12,18 @@
 *   Nota: Emplear una funcion
 *
 ***************************************************************************************************************/
+import filteredInput from "../../../filteredImput";
+
+const numSegundosConfinados = filteredInput("number","Introduce un número entero positivo")
+
+const conversorSegundos = (segundos) => {
+    return "Hemos estado confinados "
+    let semanas = 0
+    if(segundos / 604800 > 0) semanas = 
+
+}
+
+function secondsToString(seconds)
+{ 
+    return numdays + " dias " + numhours + " horas " + numminutes + " minutos " + numseconds + " segundos";
+}

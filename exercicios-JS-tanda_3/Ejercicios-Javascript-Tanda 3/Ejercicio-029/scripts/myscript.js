@@ -22,3 +22,6 @@ const esPandigital = (n) => {
 console.log(esPandigital(1129348012934801293840129348n))
 
 console.log(esPandigital(1129348056712934801293840129348n))
+
+//let numeros="0123456789"
+//numero.toString().split("").every(el=>numeros.split("").includes(el))
