@@ -1,16 +1,16 @@
 /***************************************************************************************************************
-*  
-*   Objetivo: Comprobar si cada caracter es precedido y seguido por un caracter adyaccente
-*             del alfabeto ingles
-*
-*
-*   Entrada : 
-*
-*
-*   Salida  : 
-*
-*
-***************************************************************************************************************/
+ *
+ *   Objetivo: Comprobar si cada caracter es precedido y seguido por un caracter adyaccente
+ *             del alfabeto ingles
+ *
+ *
+ *   Entrada :
+ *
+ *
+ *   Salida  :
+ *
+ *
+ ***************************************************************************************************************/
 // const comprobarCaracter = (entrada) => {
 //     let out = true
 //     entrada.split('').forEach( (char, i, arr) => {
@@ -21,9 +21,8 @@
 //             }
 //         }
 //     })
-//     return out    
+//     return out
 // }
-
 
 // const comprobarCaracteres = (entrada) => {
 //    return entrada.split('').every((char,i,arr) => {
@@ -33,8 +32,10 @@
 // }})
 // }
 
-
 const comprobarCaracteres = (entrada) => {
-    return entrada.split('').every((char,i,arr) => {
-     (i === 0) ? return true : return char.charCodeAt() - 1 === arr[i-1].charCodeAt()})
- }
+  return entrada
+    .split("")
+    .every((char, i, arr) =>
+      i === 0 ? true : char.charCodeAt() - 1 === arr[i - 1].charCodeAt()
+    );
+};

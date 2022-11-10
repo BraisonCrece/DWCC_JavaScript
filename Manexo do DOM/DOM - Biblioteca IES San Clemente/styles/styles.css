@@ -1,0 +1,157 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    color: #444;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: url("https://images.hdqwalls.com/wallpapers/journey-goes-on-ny.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+h1, h2{
+    font-weight: normal;
+}
+
+#contenedor{
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 0 0 20px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    background: rgba(228, 220, 220, 0.904);
+    opacity: 0.95;
+}
+
+#page-banner{
+    background: #eee ;
+    padding: 10px 0;
+
+}
+
+#page-banner h1, #page-banner p{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#page-banner input{
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+}
+
+#libros-container, #libro-add, #tabbed-content{
+    margin: 30px;
+}
+
+#libros-container ul, #tabbed-content ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#libros-container li{
+    padding: 20px;
+    border-left: 5px solid #ddd;
+    margin: 20px 10px;
+}
+
+#libros-container li:hover{
+    border-color: #3ba16e;
+}
+
+.borrar{
+    float: right;
+    background: rgb(83, 79, 79);
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    width: 13px;
+    height: 1px;
+}
+
+.borrar:hover{
+    background: rgb(230, 6, 6);
+}
+
+#libro-add{
+    width: 400px;
+    margin: 0 auto;
+}
+
+#libro-add input{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 300px;
+    float: left;
+}
+
+#libro-add button{
+    border: 1px solid #3ba16e;
+    background: #3ba16e;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 20px 0;
+    border-left: 0;
+    color: white;
+}
+
+#libro-add:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#libro-add #ocultar {
+    width: 30px;
+}
+
+#libro-add label {
+    line-height: 52px;
+}
+
+
+#tabbed-content li{
+    display: inline-flex;
+    padding: 10px 14px;
+    background: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* #about {
+    text-align: left;
+} */
+
+#tabbed-content .tab{
+    display: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#tabbed-content .tab.active{
+    display: block;
+}
+
